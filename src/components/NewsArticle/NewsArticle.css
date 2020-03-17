@@ -1,4 +1,9 @@
+.news-article-div {
+  width: 500px;
+  height: 400px;
+}
+
 .article-image {
   width: 500px;
-  height: 350px;
+  height: 250px;
 }
