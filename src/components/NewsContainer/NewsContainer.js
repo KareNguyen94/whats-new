@@ -6,10 +6,12 @@ import NewsArticle from '../NewsArticle/NewsArticle';
 
 class NewsContainer extends Component {
   render() {
-    return <div>{this.props.localNews.map(news => {
-      return <NewsArticle news={news}></NewsArticle>
-    })}
-    </div>
+    return (
+      <div>{this.props.localNews.map(news => {
+        return <NewsArticle news={news}></NewsArticle>
+      })}
+      </div>
+    );
   }
 }
 
