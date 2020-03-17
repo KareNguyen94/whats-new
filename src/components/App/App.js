@@ -4,15 +4,19 @@ import entertainment from '../../data/entertainment';
 import health from '../../data/health';
 import science from '../../data/science';
 import technology from '../../data/technology'
-
 import './App.css';
 import NewsContainer from '../NewsContainer/NewsContainer';
+import Menu from '../Menu/Menu';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      local
+      local,
+      entertainment,
+      health,
+      science,
+      technology,
     }
   }
 
@@ -20,6 +24,7 @@ class App extends Component {
     return (
       <div className="app">
         <NewsContainer localNews={local}></NewsContainer>
+        <Menu></Menu>
       </div>
     );
   }
