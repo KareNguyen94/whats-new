@@ -28,7 +28,7 @@ class SearchForm extends Component {
 
         <button
           type="button"
-
+          onClick={() => this.props.searchArticles(this.state.input)}
         >Search
         </button>
       </form>
