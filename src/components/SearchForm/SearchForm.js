@@ -11,7 +11,9 @@ class SearchForm extends Component {
     }
   }
 
- 
+  updateState = (event) => {
+    this.setState({input: event.target.value})
+  }
 
   render() {
     return (
@@ -20,6 +22,7 @@ class SearchForm extends Component {
           type="text" 
           placeholder="Search for news article here"
           value={this.state.input}
+          onChange={this.updateState}
         >
         </input>
 
