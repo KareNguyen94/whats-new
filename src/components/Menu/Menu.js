@@ -7,7 +7,7 @@ const Menu = () => {
 
   return (
     <div>
-      <button name='local' >Local</button>
+      <button name='local'>Local</button>
       <button name='entertainment' >Entertainment</button>
       <button name='health' >Health</button>
       <button name='science' >Science</button>
