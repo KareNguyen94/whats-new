@@ -26,12 +26,21 @@ class App extends Component {
     this.setState({currentPage: this.state[page]});
   }
 // everytime you setState Render runs
+  searchArticles = (searchedArticle) => {
+    console.log('heloooo')
+    let filteredArticles = this.state.currentPage.filter(article => {
+      if(article.headline.toLowerCase().includes(searchedArticle.toLowerCase()) || article.description.toLowerCase().includes(searchedArticle.toLowerCase())) {
+        return article
+      }
+    })
+    this.setState({currentPage: filteredArticles})
+  }
 
   render () {
     return (
       <div className="app">
         <h1 className='header'>What's New
-        <SearchForm></SearchForm>
+        <SearchForm searchArticles={this.searchArticles}></SearchForm>
         </h1>
         <div className='nav'> 
           <Menu className='nav' switchPage={this.switchPage}></Menu>
