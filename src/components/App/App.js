@@ -24,6 +24,7 @@ class App extends Component {
   switchPage = (page) => {
     this.setState({currentPage: this.state[page]});
   }
+// everytime you setState Render runs
 
   render () {
     return (
