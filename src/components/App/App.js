@@ -7,6 +7,7 @@ import technology from '../../data/technology'
 import './App.css';
 import NewsContainer from '../NewsContainer/NewsContainer';
 import Menu from '../Menu/Menu';
+import SearchForm from '../SearchForm/SearchForm'
 
 class App extends Component {
   constructor() {
@@ -29,7 +30,9 @@ class App extends Component {
   render () {
     return (
       <div className="app">
-        <h1 className='header'>What's New</h1>
+        <h1 className='header'>What's New
+        <SearchForm></SearchForm>
+        </h1>
         <div className='nav'> 
           <Menu className='nav' switchPage={this.switchPage}></Menu>
         </div>
