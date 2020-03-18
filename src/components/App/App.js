@@ -17,14 +17,22 @@ class App extends Component {
       health,
       science,
       technology,
+      currentPage: local
     }
+  }
+
+  switchPage = (page) => {
+    this.setState({currentPage: this.state[page]});
   }
 
   render () {
     return (
       <div className="app">
-        <NewsContainer localNews={local}></NewsContainer>
-        <Menu></Menu>
+        <h1 className='header'>What's New</h1>
+        <div className='nav'> 
+          <Menu className='nav' switchPage={this.switchPage}></Menu>
+        </div>
+        <NewsContainer className='main' news={this.state.currentPage}></NewsContainer>
       </div>
     );
   }
