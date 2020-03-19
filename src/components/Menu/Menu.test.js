@@ -19,4 +19,4 @@ describe('Menu', () => {
 
     expect(mockSwitchPage).toHaveBeenCalledWith({name: 'Local'})
   })
-})
+});
