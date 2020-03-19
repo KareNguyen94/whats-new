@@ -6,7 +6,7 @@ import { render } from
 import '@testing-library/jest-dom';
 
 describe('NewsArticle', () => {
-  it('displays correct information in the card', () => {
+  it('displays correct information in the news article', () => {
     const { getByText } = render(<NewsArticle
       id={1}
       headline={'The Who postpones Denver Concert at the Pepsi Center'}
