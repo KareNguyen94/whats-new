@@ -7,7 +7,14 @@ import NewsArticle from '../NewsArticle/NewsArticle';
 const NewsContainer = ({news}) => {
   return (
     <div>{news.map(news => {
-      return <NewsArticle news={news} key={news.id}></NewsArticle>
+      return <NewsArticle 
+        key={news.id}
+        headline={news.headline}
+        img={news.img}
+        description={news.description}
+        url={news.url}
+        >
+        </NewsArticle>
     })}
     </div>
   );
