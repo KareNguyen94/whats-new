@@ -3,12 +3,12 @@ import './NewsArticle.css';
 
 // NEWSARTICLE COMPONENT CODE GOES HERE
 
-const NewsArticle = (props) => {
+const NewsArticle = ({id, headline, img, description, url}) => {
   return <div className='news-article-div'>
-    <h2>{props.news.headline}</h2>
-    <img className='article-image' src={props.news.img} />
-    <p>{props.news.description}</p>
-    <a href={props.news.url}>Link to article -></a>
+    <h2>{headline}</h2>
+    <img className='article-image' src={img} />
+    <p>{description}</p>
+    <a href={url}>Link to article -></a>
   </div>
 }
 
